@@ -123,10 +123,10 @@
 
     <!-- SEÇÃO 3 - DEPOIMENTOS -->
     <section class="testimonials" id="testimonials">
-            <div class="container">
+        <div class="container">
             <h2 class="section-title">O Que Nossas <span class="highlight-gold">Alunas Estão Dizendo</span></h2>
             
-            <!-- Grid 3x2 de Depoimentos -->
+            <!-- Grid 3x2 de Depoimentos (Desktop/Tablet) -->
             <div class="testimonials-grid">
                 <!-- Depoimento 1 -->
                 <div class="testimonial-card-compact">
@@ -188,6 +188,76 @@
                     <div class="stars-compact">⭐⭐⭐⭐⭐</div>
                     </div>
                 </div>
+
+            <!-- Carrossel Mobile (Android/iOS) -->
+            <div class="testimonials-carousel-mobile">
+                <button class="carousel-nav-btn prev" onclick="moveTestimonialCarousel(-1)">‹</button>
+                <div class="carousel-track" id="testimonial-carousel-track">
+                    <!-- Depoimento 1 -->
+                    <div class="testimonial-card-compact">
+                        <div class="testimonial-image-compact">
+                            <div class="foto-label-mini">FOTO2</div>
+                        </div>
+                        <p class="testimonial-text-compact">"Fiz minha primeira venda em 3 dias!"</p>
+                        <p class="testimonial-author-compact">- Maria Silva</p>
+                        <div class="stars-compact">⭐⭐⭐⭐⭐</div>
+                    </div>
+
+                    <!-- Depoimento 2 -->
+                    <div class="testimonial-card-compact">
+                        <div class="testimonial-image-compact">
+                            <div class="foto-label-mini">FOTO3</div>
+                        </div>
+                        <p class="testimonial-text-compact">"Já fiz mais de R$2.000 sem aparecer!"</p>
+                        <p class="testimonial-author-compact">- Ana Paula</p>
+                        <div class="stars-compact">⭐⭐⭐⭐⭐</div>
+                    </div>
+
+                    <!-- Depoimento 3 -->
+                    <div class="testimonial-card-compact">
+                        <div class="testimonial-image-compact">
+                            <div class="foto-label-mini">FOTO4</div>
+                        </div>
+                        <p class="testimonial-text-compact">"Esse método mudou minha vida!"</p>
+                        <p class="testimonial-author-compact">- Juliana Costa</p>
+                        <div class="stars-compact">⭐⭐⭐⭐⭐</div>
+                    </div>
+
+                    <!-- Depoimento 4 -->
+                    <div class="testimonial-card-compact">
+                        <div class="testimonial-image-compact">
+                            <div class="foto-label-mini">FOTO6</div>
+                        </div>
+                        <p class="testimonial-text-compact">"Comecei do zero e hoje vivo disso!"</p>
+                        <p class="testimonial-author-compact">- Fernanda Souza</p>
+                        <div class="stars-compact">⭐⭐⭐⭐⭐</div>
+                    </div>
+
+                    <!-- Depoimento 5 -->
+                    <div class="testimonial-card-compact">
+                        <div class="testimonial-image-compact">
+                            <div class="foto-label-mini">FOTO7</div>
+                        </div>
+                        <p class="testimonial-text-compact">"Método simples e funciona de verdade!"</p>
+                        <p class="testimonial-author-compact">- Camila Lima</p>
+                        <div class="stars-compact">⭐⭐⭐⭐⭐</div>
+                    </div>
+
+                    <!-- Depoimento 6 -->
+                    <div class="testimonial-card-compact">
+                        <div class="testimonial-image-compact">
+                            <div class="foto-label-mini">FOTO8</div>
+                        </div>
+                        <p class="testimonial-text-compact">"Melhor investimento que já fiz!"</p>
+                        <p class="testimonial-author-compact">- Patricia Alves</p>
+                        <div class="stars-compact">⭐⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+                <button class="carousel-nav-btn next" onclick="moveTestimonialCarousel(1)">›</button>
+
+                <!-- Indicadores (dots) -->
+                <div class="carousel-dots" id="testimonial-carousel-dots"></div>
+            </div>
             </div>
         </section>
 
