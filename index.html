@@ -8,11 +8,63 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* 🔽 Ajuste do indicador de rolagem para ficar no centro da parte preta */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 60px; /* controla a distância até o final da section */
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            color: #FFD700;
+            font-family: 'Montserrat', sans-serif;
+            z-index: 10;
+        }
+
+        .scroll-indicator span {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 6px;
+        }
+
+        .scroll-arrow {
+            width: 24px;
+            height: 40px;
+            border: 2px solid #FFD700;
+            border-radius: 20px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .scroll-arrow::after {
+            content: "";
+            position: absolute;
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 4px;
+            background-color: #FFD700;
+            border-radius: 50%;
+            animation: scrollDown 1.5s infinite;
+        }
+
+        @keyframes scrollDown {
+            0% { opacity: 0; transform: translate(-50%, 0); }
+            50% { opacity: 1; transform: translate(-50%, 10px); }
+            100% { opacity: 0; transform: translate(-50%, 20px); }
+        }
+
+        /* Garante que o section hero tenha posição relativa para posicionar o indicador corretamente */
+        .hero {
+            position: relative;
+        }
+    </style>
 </head>
 <body>
     <!-- ANIMAÇÃO DA LOGO INICIAL - EXPLOSÃO REVERSA (VIDRO QUEBRADO) -->
     <div id="logo-intro" class="logo-intro active">
-        <!-- Container dos fragmentos -->
         <div id="fragments-container" class="fragments-container"></div>
         
         <div class="logo-container" id="logo-final">
@@ -24,9 +76,9 @@
                 <h1>Venda Silenciosa</h1>
                 <span>START</span>
             </div>
-            </div>
+        </div>
         <div class="glass-shine-effect"></div>
-                </div>
+    </div>
 
     <!-- LOGO FIXA NO TOPO -->
     <header id="header" class="header">
@@ -64,18 +116,18 @@
                     <p class="placeholder-text">FOTO1 - Imagem Principal da Mentora</p>
                     <p class="placeholder-hint">(400x600px recomendado)</p>
                 </div>
-                </div>
-                </div>
+            </div>
+        </div>
 
-        <!-- 🔽 CORRIGIDO: indicador de rolagem mais para baixo -->
-        <div class="scroll-indicator" style="margin-top: 80px;">
+        <!-- ✅ Indicador centralizado no espaço preto -->
+        <div class="scroll-indicator">
             <span>Deslize</span>
             <div class="scroll-arrow"></div>
         </div>
     </section>
     <!-- SEÇÃO 2 - BENEFÍCIOS -->
     <section class="benefits" id="benefits">
-            <div class="container">
+        <div class="container">
             <h2 class="section-title">Por Que Escolher a <span class="highlight-gold">Venda Silenciosa?</span></h2>
             <div class="benefits-grid">
                 <div class="benefit-card scroll-reveal">
@@ -84,10 +136,10 @@
                             <circle cx="30" cy="30" r="28" stroke="url(#goldGradient)" stroke-width="2" fill="none"/>
                             <text x="30" y="40" text-anchor="middle" font-size="30">🤫</text>
                         </svg>
-                            </div>
+                    </div>
                     <h3>Você Não Precisa Aparecer</h3>
                     <p>Trabalhe nos bastidores e venda com total privacidade. Sem câmera, sem exposição.</p>
-                        </div>
+                </div>
                         
                 <div class="benefit-card scroll-reveal">
                     <div class="benefit-icon">
@@ -98,7 +150,7 @@
                     </div>
                     <h3>Método Simples e Comprovado</h3>
                     <p>Passo a passo direto ao ponto. Sem enrolação, sem teoria inútil.</p>
-                        </div>
+                </div>
                         
                 <div class="benefit-card scroll-reveal">
                     <div class="benefit-icon">
@@ -120,15 +172,17 @@
                 </linearGradient>
             </defs>
         </svg>
-        </section>
+    </section>
 
     <!-- SEÇÃO 3 - DEPOIMENTOS -->
     <section class="testimonials" id="testimonials">
         <div class="container">
             <h2 class="section-title">O Que Nossas <span class="highlight-gold">Alunas Estão Dizendo</span></h2>
             
+            <!-- Grid Desktop -->
             <div class="testimonials-grid"> ... </div>
 
+            <!-- Carrossel Mobile -->
             <div class="testimonials-carousel-mobile">
                 <button class="carousel-nav-btn prev" onclick="moveTestimonialCarousel(-1)">‹</button>
                 <div class="carousel-track" id="testimonial-carousel-track"> ... </div>
